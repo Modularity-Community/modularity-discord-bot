@@ -16,11 +16,8 @@ export async function poke() {
 
 	// execute func
 	async function execute(interaction: ChatInputCommandInteraction) {
-        await interaction.channel?.sendTyping()
         const target = interaction.options.getMentionable("target")
-        await interaction.channel?.send({
-            content: `<@!${interaction.user.id}> poked ${target}`,
-        })
+        await interaction.reply(`<@!${interaction.user.id}> poked ${target}`)
 	}
 
 	return { name, builder, execute }
