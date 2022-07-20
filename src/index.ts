@@ -12,7 +12,18 @@ dotenv.config();
         intents: [
             IntentsBitField.Flags.Guilds,
             IntentsBitField.Flags.GuildMessages,
-            IntentsBitField.Flags.MessageContent
+            IntentsBitField.Flags.GuildBans,
+            IntentsBitField.Flags.GuildEmojisAndStickers,
+            IntentsBitField.Flags.GuildIntegrations,
+            IntentsBitField.Flags.GuildInvites,
+            IntentsBitField.Flags.GuildMembers,
+            IntentsBitField.Flags.GuildMessageReactions,
+            IntentsBitField.Flags.GuildMessageTyping,
+            IntentsBitField.Flags.GuildPresences,
+            IntentsBitField.Flags.GuildScheduledEvents,
+            IntentsBitField.Flags.GuildVoiceStates,
+            IntentsBitField.Flags.GuildWebhooks,
+            IntentsBitField.Flags.MessageContent,
         ]
     })
 
