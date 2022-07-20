@@ -1,4 +1,4 @@
-export const validateEnv = () => {
+export const ValidateEnv = () => {
     // bot token
     if (!process.env.BOT_TOKEN) {
         console.warn("Missing Discord bot token.");

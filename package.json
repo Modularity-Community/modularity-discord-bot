@@ -13,9 +13,9 @@
   "name": "modularity-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "./prod/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node -r dotenv/config ./prod/index.js"
+    "deploy":"ts-node ./src/DeployCommands.ts",
+    "dev": "ts-node ./src/index.ts",
+    "build": "tsc"
   }
 }
