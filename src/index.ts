@@ -1,6 +1,7 @@
 import { Client, IntentsBitField } from "discord.js"
 import { ValidateEnv } from "./utils/ValidateEnv"
-import { Commands } from "./commands/Commands";
+import { SlashCommands, PrefixCommands } from "./commands/Commands";
+import { prefix } from "./config/Config";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -36,7 +37,7 @@ dotenv.config();
     });
 
     client.on("interactionCreate", async interaction => {
-        Commands.map(async (item:any) => {
+        SlashCommands.map(async (item:any) => {
             const {name, execute} = await item()
             if (interaction.isChatInputCommand()
                 || interaction.isContextMenuCommand()
@@ -52,7 +53,14 @@ dotenv.config();
     })
 
     client.on("messageCreate", async (message) => {
-        console.log(message)
+        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+        const command = args.shift()!.toLowerCase();
+        PrefixCommands.map(async (item:any) => {
+            const { name, execute } = await item()
+            if (name == command) {
+                execute(message, args)
+            }
+        })
     })
 
     await client.login(process.env.BOT_TOKEN)

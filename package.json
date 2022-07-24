@@ -14,7 +14,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "deploy":"ts-node ./src/DeployCommands.ts",
+    "deploy":"ts-node ./src/DeploySlashCommands.ts",
     "dev": "ts-node ./src/index.ts",
     "build": "tsc"
   }

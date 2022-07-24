@@ -1,6 +1,6 @@
 import { ChatInputCommandInteraction, SlashCommandBuilder } from "discord.js"
 
-export async function poke() {
+export async function slash_poke() {
 	// name
 	let name = 'poke'
 
