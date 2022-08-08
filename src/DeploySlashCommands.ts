@@ -1,6 +1,6 @@
 import { REST } from "@discordjs/rest"
 import { Routes } from "discord-api-types/v9"
-import { Commands } from "./commands/Commands";
+import { SlashCommands } from "./commands/Commands";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -11,7 +11,7 @@ const rest = new REST({ version: '9' }).setToken(process.env.BOT_TOKEN!);
 	try {
 		console.log('Started refreshing application (/) commands.');
 
-		let d = Commands.map(async(item) => {
+		let d = SlashCommands.map(async(item) => {
 			return (await item()).builder.toJSON()
 		})
 

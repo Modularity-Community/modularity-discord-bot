@@ -8,13 +8,14 @@
     "@types/node": "^18.0.6",
     "discord.js": "^14.0.2",
     "dotenv": "^16.0.1",
+    "tenorjs": "^1.0.8",
     "ts-node": "^10.9.1"
   },
   "name": "modularity-bot",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "deploy":"ts-node ./src/DeployCommands.ts",
+    "deploy": "ts-node ./src/DeploySlashCommands.ts",
     "dev": "ts-node ./src/index.ts",
     "build": "tsc"
   }

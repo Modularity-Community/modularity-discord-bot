@@ -1,6 +1,6 @@
-import { CacheType, ChatInputCommandInteraction, SlashCommandBuilder } from "discord.js"
+import { ChatInputCommandInteraction, SlashCommandBuilder } from "discord.js"
 
-export async function ping() {
+export async function slash_ping() {
 	// name
 	let name = 'ping'
 
