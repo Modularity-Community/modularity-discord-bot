@@ -59,6 +59,7 @@ dotenv.config();
             const { name, execute } = await item()
             if (name == command) {
                 execute(message, args)
+                return
             }
         })
     })
