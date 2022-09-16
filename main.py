@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+bot_prefix = os.getenv('BOT_PREFIX')
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix='~', intents=intents)
 
